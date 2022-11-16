@@ -14,3 +14,6 @@ console.log(bodyElement)
 // Given the <p> element as var p,
 // access the 3rd <li>  and log to the console.
 const p = document.querySelector('p');
+//console.log(ul.lastElementChild)
+const lastListItem = p.previousElementSibling.lastElementChild
+console.log(lastListItem)
