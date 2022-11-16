@@ -7,6 +7,9 @@ console.log(main)
 // Given the <ul> element as variable ul,
 // access <body>  and log to the console.
 const ul = document.querySelector('ul');
+//console.log(body) 
+const bodyElement = ul.parentElement.parentElement
+console.log(bodyElement)
 
 // Given the <p> element as var p,
 // access the 3rd <li>  and log to the console.
