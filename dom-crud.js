@@ -1,6 +1,11 @@
 // Create a new <a> element containing the text "Buy Now!" 
 // with an id of "cta" after the last <p>
+const cta = document.createElement('a');
+cta.innerText = 'Buy Now!'
+cta.setAttribute('id', 'cta')
 
+const pElement = document.querySelector('p')
+pElement.after(cta)
 
 // Access (read) the data-color attribute of the <img>,
 // log to the console
