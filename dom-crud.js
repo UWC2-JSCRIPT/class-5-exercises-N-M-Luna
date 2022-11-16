@@ -9,6 +9,9 @@ pElement.after(cta)
 
 // Access (read) the data-color attribute of the <img>,
 // log to the console
+const image = document.querySelector('img')
+const imageColor = image.dataset.color
+console.log(`Image is ${imageColor}.`)
 
 
 // Update the third <li> item ("Turbocharged"), 
