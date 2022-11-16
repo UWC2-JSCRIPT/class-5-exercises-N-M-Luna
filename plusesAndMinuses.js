@@ -11,3 +11,8 @@ plusBtn.addEventListener('click', () => {
 })
 
 // When a user clicks the – element, the count should decrease by 1 on screen.
+const minusBtn = document.querySelector('.minus-btn')
+minusBtn.addEventListener('click', () => {
+    counter--
+    counterDisplay.innerHTML = counter
+})
