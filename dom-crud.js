@@ -1,9 +1,8 @@
 // Create a new <a> element containing the text "Buy Now!" 
-// with an id of "cta" after the last <p>
 const cta = document.createElement('a');
 cta.innerText = 'Buy Now!'
+// with an id of "cta" after the last <p>
 cta.setAttribute('id', 'cta')
-
 const pElement = document.querySelector('p')
 pElement.after(cta)
 
@@ -22,3 +21,5 @@ listItems[2].setAttribute('class', 'highlight')
 
 // Remove (delete) the last paragraph
 // (starts with "Available for purchase now…")
+const mainElement = document.querySelector('main')
+mainElement.removeChild(pElement)
