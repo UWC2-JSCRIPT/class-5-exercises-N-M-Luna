@@ -1,6 +1,8 @@
 // Given the <body> element as variable body,
 // access the <main> node and log to the console.
 const body = document.querySelector('body');
+const main = body.querySelector('main')
+console.log(main)
 
 // Given the <ul> element as variable ul,
 // access <body>  and log to the console.
