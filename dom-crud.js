@@ -16,6 +16,8 @@ console.log(`Image is ${imageColor}.`)
 
 // Update the third <li> item ("Turbocharged"), 
 // set the class name to "highlight"
+const listItems = document.querySelectorAll('li')
+listItems[2].setAttribute('class', 'highlight')
 
 
 // Remove (delete) the last paragraph
