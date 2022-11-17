@@ -29,6 +29,14 @@ toDoList.addEventListener('click', (e) => {
 })
 
 // If a delete link is clicked, delete the li element / remove from the DOM
+const deleteBtn = document.querySelector('.delete')
+// When a delete link is clicked, 
+deleteBtn.addEventListener('click', (e) => {
+  //grab the list item,
+  const unwantedItem = e.target.parentNode 
+  // and delete it from the parent node
+  toDoList.removeChild(unwantedItem)
+})
 
 // If an 'Add' link is clicked, adds the item as a new list item with
 // addListItem function has been started to help you get going!
