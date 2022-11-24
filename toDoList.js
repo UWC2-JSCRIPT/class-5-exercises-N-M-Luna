@@ -8,33 +8,25 @@ toDoList.addEventListener('click', (e) => {
   let listItem
 
   switch (itemClicked.tagName) {
-    // If the click happened on a SPAN or an A tag, 
-    case 'SPAN':
-    case 'A':
-      // the list item is the second element on the event's path.
-      listItem = e.path[1]
+    case 'SPAN': // If the click happened on a SPAN tag, 
+      // toggle the 'done' class in its parent node (the LI element)
+      listItem = itemClicked.parentNode
       listItem.classList.toggle('done')
       break;
 
-    // If the click happened on an LI tag,
-    case 'LI':
-      // the list item is the event's target.
-      listItem = e.target
-      listItem.classList.toggle('done')
+    case 'A': // If the click happened on an A tag,
+      //grab the list item, and delete it from the parent node
+      const unwantedItem = itemClicked.parentNode 
+      toDoList.removeChild(unwantedItem)
+      break;
+
+    case 'LI': // If the click happened on an LI tag,
+      // toggle the 'done' class in it.
+      itemClicked.classList.toggle('done')
       break;
   
     default: // If the client clicks on the ul (but not on any item) do nothing.
       break;
-  }
-  
-  // If a delete link is clicked, delete the li element / remove from the DOM
-
-  // If the client clicked on a .delete element,
-  if (e.target.classList.contains('delete')) {
-    //grab the list item,
-    const unwantedItem = e.target.parentNode 
-    // and delete it from the parent node
-    toDoList.removeChild(unwantedItem)
   }
 })
 
